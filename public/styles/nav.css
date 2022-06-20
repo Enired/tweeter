@@ -1,3 +1,14 @@
 nav{
-  font-family: Bungee, sans-serif
+  display: flex;
+  font-family: Bungee, sans-serif;
+  color: #FFFFFF;
+  height: 120px;
+  background-color: #4056A1;
+}
+
+#nav-title-logo{
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
