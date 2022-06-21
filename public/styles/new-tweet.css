@@ -9,13 +9,16 @@ form{
 form div{
   display: flex;
   width: 100%;
-  color: #e6bd41
-  ;
+  color: #e6bd41;
   justify-content: space-between;
   padding: 10px;
 }
 
-textarea{
+form label{
+  padding:15px;
+}
+
+textarea {
   outline: none;
   border-color: white;
   border-top: 0em;
@@ -27,18 +30,18 @@ textarea{
   width: 100%;
   font-size: 15px;
   height: 35px;
-  margin-top: 15px;
+  color: #FFFFFF;
 
 }
 .counter{
  font-family: Bungee;
 }
-#submit{
+#tweet-submit{
   background-color: #943141;
   color:#e6bd41;
   border-color: #e6bd41;
   border-radius: 8px;
-  font-family: Source Sans Pro;
+  font-family: Bungee;
   font-weight: bold;
   
 
