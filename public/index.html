@@ -34,13 +34,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="nav-title-logo"><h1>tweeter</h1></span>
-      <span class="write-new-tweet-container">
-        <div>
-          <div class="write-new-tweet-text">Write a new tweet</div>
-          <div class="write-new-tweet-logo">
-            <i class="fa-solid fa-angles-down"></i>
-          </div>
-        </div>
+      <span class="write-new-tweet">
+          <div>Write a new tweet</div>
+          <i class="fa-solid fa-angles-down"></i>
       </span>
     </nav>
 
@@ -56,8 +52,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde maiores eum provident dolor esse totam voluptatum dolore, laboriosam vero quasi ducimus fuga illo non voluptate doloremque nemo quidem! Nemo.</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque provident recusandae voluptate, dolore cum suscipit, illo fugiat iure, quasi dignissimos voluptatibus eveniet accusamus! Illum suscipit, corporis fuga aperiam quas quod?</p>
+      <section>
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text"> What are you humming about?</label>
+          <textarea name="text" id="tweet"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
