@@ -1,15 +1,22 @@
 $(()=>{
   //Code goes here
   const $userInput = $('#tweet-text');
-  
-  $userInput.on('keydown', (event) =>{
-    const keyPressVal = event.originalEvent.key
-    if(keyPressVal === 'Backspace'){
-      console.log('yo');
+  let composerCharCounter = $('.counter');
+  let charCount = composerCharCounter.val();
+  $userInput.on('input', (event) =>{
+    const inputType = event.originalEvent.inputType
+    if(inputType === 'deleteContentBackward'){
+      if(charCount < 140){
+        charCount++;
+        composerCharCounter.val(charCount)
+      }
     }
     else{
-      console.log(keyPressVal) 
+      charCount--;
+      composerCharCounter.val(charCount)
     }
+
+    console.log(inputType)
     })
   
 })
