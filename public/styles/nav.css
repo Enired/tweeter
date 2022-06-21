@@ -2,6 +2,7 @@ nav{
   display: flex;
   font-family: Bungee, sans-serif;
   color: #FFFFFF;
+  width: 100%;
   height: 120px;
   background-color: #4056A1;
 }
