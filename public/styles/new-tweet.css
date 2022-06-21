@@ -1,0 +1,45 @@
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 50%
+}
+
+form div{
+  display: flex;
+  width: 100%;
+  color: #e6bd41
+  ;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+textarea{
+  outline: none;
+  border-color: white;
+  border-top: 0em;
+  border-left: 0em;
+  border-right: 0em;
+  background-color: #414152;
+  overflow-y: hidden;
+  resize: none;
+  width: 100%;
+  font-size: 15px;
+  height: 35px;
+  margin-top: 15px;
+
+}
+.counter{
+ font-family: Bungee;
+}
+#submit{
+  background-color: #943141;
+  color:#e6bd41;
+  border-color: #e6bd41;
+  border-radius: 8px;
+  font-family: Source Sans Pro;
+  font-weight: bold;
+  
+
+}
