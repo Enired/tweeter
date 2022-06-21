@@ -17,3 +17,7 @@ header{
   #first-name{
     font-weight: 600;
   }
+
+  h2{
+    margin: 0em;
+  }
