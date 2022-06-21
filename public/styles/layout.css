@@ -20,9 +20,10 @@ body {
   color: #FFFFFF;
   background-color: #414152;
   font-size: 24px;
-  font-family: Source Sans Pro, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   align-items: center;
   flex-direction: column;
+  font-weight: 300;
 
 }
 
@@ -30,7 +31,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main{
+ body main{
   display: flex;
   width: 90%;
   background-color: #414152;
