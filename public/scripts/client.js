@@ -75,7 +75,9 @@ $(()=>{
   renderTweets(tweetData)
 
   $('#compose-tweet').submit((event) => {
-    console.log(event);
+    const userInput = $('#compose-tweet').serialize()
+    
+    console.log(userInput);
     event.preventDefault();
   })
 
