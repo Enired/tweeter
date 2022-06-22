@@ -32,7 +32,7 @@ $(()=>{
       </header>
       <p class="article-text">${content}</p>
       <footer>
-        <p>${creationDate}</p>
+        <p>${timeago.format(creationDate)}</p>
         <span>
           <i class="fa-solid fa-thumbs-up"></i>
           <i class="fa-regular fa-heart"></i>
