@@ -1,14 +1,14 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
+*/
 
 $(()=>{
   // TEST CODE. DELETE AFTER
-  const tweetData = {
+  const tweetData = [{
     "user": {
-      "name": "Octavio",
+      "name": "Octavio Silva",
       "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle" : "@octane"
     },
@@ -16,7 +16,20 @@ $(()=>{
       "text" : "All aboard the octrain!"
     },
     "created_at" : 1461116232227
+  },
+  {
+    "user": {
+      "name": "Mary Sommers",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle" : "@horizon"
+    },
+    "content": {
+      "text" : "Where's Newton?"
+    },
+    "created_at" : 1461116232227
   }
+
+  ]
 
 
   const createTweetElement = (tweetObj) => {
@@ -59,11 +72,7 @@ $(()=>{
     }
   }
 
-  // const $tweet = createTweetElement(tweetData)
-
-  // console.log($tweet)
-
-  renderTweets()
+  renderTweets(tweetData)
 
 
 
