@@ -31,16 +31,22 @@ $(()=>{
 
   ]
 
-
+  //Creates an article element for a given tweet.
   const createTweetElement = (tweetObj) => {
+
+    //Tweet User Info
     const user = tweetObj.user
     const username = user.name;
     const userAvatar = user.avatars
     const userHandle = user.handle;
 
+    //Tweet Content
     const content = tweetObj.content.text
 
+    //Tweet Creation
     const creationDate = tweetObj.created_at
+
+    //Article Assembly
     let $tweet = $(`
       <article>
         <header class="article-header">
@@ -62,6 +68,7 @@ $(()=>{
       </footer>
       </article>
       `)
+
     return $tweet
   };
   
@@ -74,6 +81,7 @@ $(()=>{
 
   renderTweets(tweetData)
 
+  //Form Submission Event Handler
   $('#compose-tweet').submit((event) => {
     const userInput = $('#compose-tweet').serialize()
     $.post('/tweets', userInput)
