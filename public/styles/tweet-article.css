@@ -5,6 +5,7 @@ article{
   height: auto;
   border: solid #7b7b7b;
   padding: 10px 10px;
+  margin: 10px 0px;
 }
 
 article:hover{
