@@ -14,6 +14,7 @@ article:hover{
 article header{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   height: fit-content;
   margin-top: 0px;
