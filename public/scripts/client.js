@@ -57,8 +57,25 @@ $(()=>{
   //Form Submission Event Handler
   $('#compose-tweet').submit((event) => {
     event.preventDefault();
-    const userInput = $('#compose-tweet').serialize()
-    $.post('/tweets', userInput, () =>{
+    const userInput = $('#tweet-text') 
+
+    //Form Validation
+    if(userInput.val() === '' || userInput.val() === null){
+      return alert('Please enter something');
+    }
+
+    if(userInput.val().length > 140){
+      return alert('Too many characters.')
+    }
+
+    // const test = $("<div>").text(userInput)
+    // const test2 =$("<div>").text(userInput.val()) 
+    // const test3 = test2.serialize()
+    // // console.log(test)
+    // // // console.log(test2)
+    // console.log(test3)
+    const userInputSerialize = userInput.serialize()
+    $.post('/tweets', userInputSerialize, () =>{
       $('.tweet-container').empty();
       loadTweets();
     })
