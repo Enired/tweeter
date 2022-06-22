@@ -74,7 +74,10 @@ $(()=>{
 
   renderTweets(tweetData)
 
-
+  $('#compose-tweet').submit((event) => {
+    console.log(event);
+    event.preventDefault();
+  })
 
 
 
