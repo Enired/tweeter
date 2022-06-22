@@ -3,6 +3,9 @@ article{
   flex-direction: column;
   width: 50%;
   height: auto;
+  box-shadow: 10px 5px 5px #292929;
+  border: solid #7b7b7b;
+  padding: 10px 10px;
 }
 
 article header{
@@ -10,6 +13,7 @@ article header{
   flex-direction: row;
   justify-content: space-between;
   height: fit-content;
+  margin-top: 0px;
 }
 
 article h4{
@@ -17,17 +21,17 @@ article h4{
 }
 
 article p{
-  color:pink
+  text-align: justify;
 }
 
 footer{
   display: flex;
   justify-content: space-between;
-  border-top: solid 10px #aca4b4;
+  border-top: solid 10px #FFFFFF;
 }
 
 footer p{
-  color:white;
+  color:#FFFFFF;
 }
 
 footer span{
@@ -40,5 +44,10 @@ footer i{
   align-items: center;
   justify-content: center;
   padding: 3px;
+  color: #943141
 
+}
+
+footer i:hover{
+  color: #e6bd41;
 }
