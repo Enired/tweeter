@@ -76,6 +76,7 @@ $(()=>{
 
   $('#compose-tweet').submit((event) => {
     const userInput = $('#compose-tweet').serialize()
+    $.post('/tweets', userInput)
     
     console.log(userInput);
     event.preventDefault();
