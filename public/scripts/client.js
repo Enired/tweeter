@@ -5,32 +5,6 @@
 */
 
 $(()=>{
-  // TEST CODE. DELETE AFTER
-  const tweetData = [{
-    "user": {
-      "name": "Octavio Silva",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle" : "@octane"
-    },
-    "content": {
-      "text" : "All aboard the octrain!"
-    },
-    "created_at" : 1461116232227
-  },
-  {
-    "user": {
-      "name": "Mary Sommers",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle" : "@horizon"
-    },
-    "content": {
-      "text" : "Where's Newton?"
-    },
-    "created_at" : 1461116232227
-  }
-
-  ]
-
   //Creates an article element for a given tweet.
   const createTweetElement = (tweetObj) => {
 
@@ -72,6 +46,7 @@ $(()=>{
     return $tweet
   };
   
+  //Put together all created tweet article elements
   const renderTweets = (tweets) => {
     for(const tweet of tweets){
       $tweet = createTweetElement(tweet);
@@ -79,7 +54,7 @@ $(()=>{
     }
   }
 
-  renderTweets(tweetData)
+  // renderTweets(tweetData)
 
   //Form Submission Event Handler
   $('#compose-tweet').submit((event) => {
@@ -88,7 +63,17 @@ $(()=>{
     
     console.log(userInput);
     event.preventDefault();
+    $('.container').empty();
+    loadTweets();
   })
+
+  const loadTweets = () =>{
+    const tweets = $.get("/tweets", (data) => {
+      renderTweets(data)
+    } )
+  }
+
+  loadTweets();
 
 
 
