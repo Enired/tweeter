@@ -38,3 +38,10 @@ body {
   align-items: center;
   flex-direction: column;
  }
+
+ .tweet-container{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+ }

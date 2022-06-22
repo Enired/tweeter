@@ -50,21 +50,19 @@ $(()=>{
   const renderTweets = (tweets) => {
     for(const tweet of tweets){
       $tweet = createTweetElement(tweet);
-      $('.container').append($tweet);
+      $('.tweet-container').append($tweet);
     }
   }
 
-  // renderTweets(tweetData)
-
   //Form Submission Event Handler
   $('#compose-tweet').submit((event) => {
-    const userInput = $('#compose-tweet').serialize()
-    $.post('/tweets', userInput)
-    
-    console.log(userInput);
     event.preventDefault();
-    $('.container').empty();
-    loadTweets();
+    const userInput = $('#compose-tweet').serialize()
+    $.post('/tweets', userInput, () =>{
+      $('.tweet-container').empty();
+      loadTweets();
+    })
+
   })
 
   const loadTweets = () =>{
