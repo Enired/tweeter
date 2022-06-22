@@ -1,0 +1,44 @@
+article{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+}
+
+article header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+article h4{
+  margin: 10px;
+}
+
+article p{
+  color:pink
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 10px #aca4b4;
+}
+
+footer p{
+  color:white;
+}
+
+footer span{
+  display: flex;
+  align-items: center;
+}
+
+footer i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+
+}

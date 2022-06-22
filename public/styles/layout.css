@@ -35,5 +35,6 @@ body {
   display: flex;
   width: 90%;
   background-color: #414152;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
  }
