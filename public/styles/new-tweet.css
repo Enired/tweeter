@@ -36,6 +36,11 @@ textarea {
 .counter{
  font-family: Bungee;
 }
+
+.counter-over-limit{
+  color: red;
+}
+
 #tweet-submit{
   background-color: #943141;
   color:#e6bd41;
