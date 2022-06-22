@@ -17,6 +17,16 @@ article header{
   justify-content: space-between;
   height: fit-content;
   margin-top: 0px;
+  background-image: none;
+}
+
+article header span{
+  display: flex;
+  align-items: center;
+}
+
+article header span img{
+  padding: 10px 0px 10px 10px;
 }
 
 article h4{
