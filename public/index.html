@@ -50,33 +50,36 @@
       </span>
     </nav>
 
-    <header>
-      <div class = "profile-image">
-        <img src="images/profile-hex-watt.png">
-      </div>
-      <br>
-      <div class = "profile-name">
-        <h2 class="full-name"><span id="first-name">Natalie</span> Paquette</h2>
-      </div>
-    </header>
-
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <header class="main-header">
+        <div class = "profile-image">
+          <img src="images/profile-hex-watt.png">
+        </div>
+        <br>
+        <div class = "profile-name">
+          <h2 class="full-name"><span id="first-name">Natalie</span> Paquette</h2>
+        </div>
+      </header>
       <!-- Tweet Post Area -->
-      <div class="form-container">
-        <form action="/tweets" id="compose-tweet"method="post">
-          <label for="tweet-text"> What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button id="tweet-submit" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
+      <section id="tweet-section">
 
-        <div class="error-message"></div>
-      </div>
-
-      <div class="tweet-container"></div>
+        <div class="form-container">
+          <form action="/tweets" id="compose-tweet"method="post">
+            <label for="tweet-text"> What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button id="tweet-submit" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+  
+          <div class="error-message"></div>
+        </div>
+  
+        <div class="tweet-container"></div>
+      </section>
     </main>
   </body>
 </html>

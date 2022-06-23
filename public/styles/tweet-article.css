@@ -1,7 +1,7 @@
 article{
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   height: auto;
   border: solid #7b7b7b;
   padding: 10px 10px;
@@ -12,7 +12,7 @@ article:hover{
   box-shadow: 10px 5px 5px #292929;
 }
 
-article header{
+.article-header{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
