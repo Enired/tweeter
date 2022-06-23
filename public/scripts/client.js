@@ -15,10 +15,8 @@ $(()=>{
     const userHandle = user.handle;
 
     //Tweet Content
-    const content = tweetObj.content.text
-
-    //Tweet Creation
-    const creationDate = tweetObj.created_at
+    const content = $("<p>").text(tweetObj.content.text).html()
+    const creationDate = timeago.format(tweetObj.created_at)
 
     //Article Assembly
     let $tweet = $(`
@@ -32,7 +30,7 @@ $(()=>{
       </header>
       <p class="article-text">${content}</p>
       <footer>
-        <p>${timeago.format(creationDate)}</p>
+        <p>${creationDate}</p>
         <span>
           <i class="fa-solid fa-thumbs-up"></i>
           <i class="fa-regular fa-heart"></i>
@@ -75,6 +73,7 @@ $(()=>{
     // // // console.log(test2)
     // console.log(test3)
     const userInputSerialize = userInput.serialize()
+    console.log(userInputSerialize)
     $.post('/tweets', userInputSerialize, () =>{
       $('.tweet-container').empty();
       loadTweets();
