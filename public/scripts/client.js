@@ -61,23 +61,14 @@ $(()=>{
     
     //Form Validation
     if(userInput.val() === '' || userInput.val() === null){
-      // return alert('Please enter something');
       $('.error-message').text('⚠ Please enter something')
       return $('.error-message').slideDown(1000)
     }
     
     if(userInput.val().length > 140){
-      // return alert('Too many characters.')
       $('.error-message').text('⚠ Too many characters.')
       return $('.error-message').slideDown(1000)
     }
-    
-    // const test = $("<div>").text(userInput)
-    // const test2 =$("<div>").text(userInput.val()) 
-    // const test3 = test2.serialize()
-    // // console.log(test)
-    // // // console.log(test2)
-    // console.log(test3)
     const userInputSerialize = userInput.serialize()
     console.log(userInputSerialize)
     $.post('/tweets', userInputSerialize, () =>{
