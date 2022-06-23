@@ -1,5 +1,4 @@
 header{
-  margin-top: 120px;
   display: flex;
   flex-direction: column;
   font-weight: 600;
@@ -11,17 +10,26 @@ header{
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
 }
 
+.main-header{
+  position: relative;
+}
+
+.full-name{
+  font-weight: 300;
+}
+#first-name{
+  font-weight: 600;
+}
+
+h2{
+  margin: 0em;
+}
+
+@media (min-width: 1024px){
   .main-header{
-    position: relative;
+    width: 25%;
+    margin: 240px 3em 240px 3em;
   }
-
-  .full-name{
-    font-weight: 300;
   }
-  #first-name{
-    font-weight: 600;
-  }
-
-  h2{
-    margin: 0em;
-  }
+  
+  

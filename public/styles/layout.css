@@ -40,11 +40,11 @@ body {
  }
 
  .form-container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
  }
  
  .tweet-container{
@@ -57,3 +57,16 @@ body {
  section{
   width: 90%
  }
+
+ @media (min-width: 1024px){
+  section{
+    margin: 120px 3em 120px 3em;
+    width: 75%
+  }
+
+  body main{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+ }
+

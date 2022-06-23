@@ -56,7 +56,7 @@ $(()=>{
   $('#compose-tweet').submit((event) => {
     event.preventDefault();
     const userInput = $('#tweet-text') 
-    $('.error-message').slideUp()
+    $('.error-message').slideUp(0)
     
     
     //Form Validation
