@@ -56,20 +56,20 @@ $(()=>{
   $('#compose-tweet').submit((event) => {
     event.preventDefault();
     const userInput = $('#tweet-text') 
-    $('.error-message').hide(1000)
+    $('.error-message').slideUp()
     
     
     //Form Validation
     if(userInput.val() === '' || userInput.val() === null){
       // return alert('Please enter something');
       $('.error-message').text('Please enter something')
-      return $('.error-message').show(1000)
+      return $('.error-message').slideDown(1000)
     }
     
     if(userInput.val().length > 140){
       // return alert('Too many characters.')
       $('.error-message').text('Too many characters.')
-      return $('.error-message').show(1000)
+      return $('.error-message').slideDown(1000)
     }
     
     // const test = $("<div>").text(userInput)
@@ -94,8 +94,6 @@ $(()=>{
       renderTweets(data)
     } )
   }
-  
-  $('.error-message').hide(1000)
   loadTweets();
   
 
