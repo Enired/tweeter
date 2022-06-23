@@ -9,7 +9,7 @@ article{
 }
 
 article:hover{
-  box-shadow: 10px 5px 5px #292929;
+  box-shadow: 2rem 0.5rem 0.5rem #292929;
 }
 
 .article-header{
@@ -40,22 +40,22 @@ article p{
   overflow-wrap: anywhere;
 }
 
-footer{
+article footer{
   display: flex;
   justify-content: space-between;
-  border-top: solid 10px #FFFFFF;
+  border-top: solid 0.1em #FFFFFF;
 }
 
-footer p{
+article footer p{
   color:#FFFFFF;
 }
 
-footer span{
+article footer span{
   display: flex;
   align-items: center;
 }
 
-footer i{
+article footer i{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,6 +64,6 @@ footer i{
 
 }
 
-footer i:hover{
+article footer i:hover{
   color: #e6bd41;
 }
