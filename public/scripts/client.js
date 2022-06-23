@@ -62,13 +62,13 @@ $(()=>{
     //Form Validation
     if(userInput.val() === '' || userInput.val() === null){
       // return alert('Please enter something');
-      $('.error-message').text('Please enter something')
+      $('.error-message').text('⚠ Please enter something')
       return $('.error-message').slideDown(1000)
     }
     
     if(userInput.val().length > 140){
       // return alert('Too many characters.')
-      $('.error-message').text('Too many characters.')
+      $('.error-message').text('⚠ Too many characters.')
       return $('.error-message').slideDown(1000)
     }
     
@@ -95,6 +95,7 @@ $(()=>{
     } )
   }
   loadTweets();
+  $('.error-message').hide()
   
 
 
