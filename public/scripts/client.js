@@ -56,16 +56,22 @@ $(()=>{
   $('#compose-tweet').submit((event) => {
     event.preventDefault();
     const userInput = $('#tweet-text') 
-
+    $('.error-message').hide(1000)
+    
+    
     //Form Validation
     if(userInput.val() === '' || userInput.val() === null){
-      return alert('Please enter something');
+      // return alert('Please enter something');
+      $('.error-message').text('Please enter something')
+      return $('.error-message').show(1000)
     }
-
+    
     if(userInput.val().length > 140){
-      return alert('Too many characters.')
+      // return alert('Too many characters.')
+      $('.error-message').text('Too many characters.')
+      return $('.error-message').show(1000)
     }
-
+    
     // const test = $("<div>").text(userInput)
     // const test2 =$("<div>").text(userInput.val()) 
     // const test3 = test2.serialize()
@@ -78,19 +84,20 @@ $(()=>{
       $('.tweet-container').empty();
       loadTweets();
       userInput.val('')
-
+      
     })
-
+    
   })
-
+  
   const loadTweets = () =>{
     const tweets = $.get("/tweets", (data) => {
       renderTweets(data)
     } )
   }
-
+  
+  $('.error-message').hide(1000)
   loadTweets();
-
+  
 
 
 

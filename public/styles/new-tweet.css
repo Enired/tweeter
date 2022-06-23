@@ -51,3 +51,8 @@ textarea {
   
 
 }
+
+.error-message{
+  display: flex;
+  flex-direction: row;
+}
