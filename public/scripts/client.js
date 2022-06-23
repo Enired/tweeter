@@ -77,6 +77,8 @@ $(()=>{
     $.post('/tweets', userInputSerialize, () =>{
       $('.tweet-container').empty();
       loadTweets();
+      userInput.val('')
+
     })
 
   })
