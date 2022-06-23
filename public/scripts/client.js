@@ -94,6 +94,16 @@ $(()=>{
       renderTweets(data)
     } )
   }
+
+  $('#form-toggle-button').click((event) => {
+    event.preventDefault();
+    console.log('hi')
+    $('.form-container').slideToggle(913);
+  })
+
+
+
+
   loadTweets();
   $('.error-message').hide()
   
