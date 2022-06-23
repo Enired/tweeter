@@ -37,7 +37,7 @@
 
     <!-- Timeago Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
-    
+
   </head>
 
   <body>
@@ -63,18 +63,19 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!-- Tweet Post Area -->
-      <form action="/tweets" id="compose-tweet"method="post">
-        <label for="tweet-text" class="form-label"> What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div>
-          <button id="tweet-submit" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-
-      <div class="tweet-container">
+      <div class="form-container">
+        <form action="/tweets" id="compose-tweet"method="post">
+          <label for="tweet-text"> What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button id="tweet-submit" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
 
       </div>
+
+      <div class="tweet-container"></div>
 
       <!-- Tweets Area -->
       
