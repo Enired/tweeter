@@ -2,7 +2,16 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This project was made using HTML, CSS, JS, AJAX, and jQuery
+
+As this page is a Single Page App (SPA) the page does not need to be refreshed when a new tweet is posted.
+
+## Final Product
+[Main Page](https://github.com/Enired/tweeter/blob/master/docs/main-page.png)
+[Small Screen Main Page](https://github.com/Enired/tweeter/blob/master/docs/small-screen-main-page.png)
+[Screenshot of Error message when there is no input](https://github.com/Enired/tweeter/blob/master/docs/error-message-no-input.png)
+[Screenshot of Error message when the character limit is exceeded](https://github.com/Enired/tweeter/blob/master/docs/error-message-over-limit.png)
+[Scroll to top button](https://github.com/Enired/tweeter/blob/master/docs/scroll-back-up-to-top-button.png)
 
 ## Getting Started
 
