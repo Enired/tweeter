@@ -58,6 +58,16 @@ body {
   width: 90%
  }
 
+ .scroll-back-up{
+  position: fixed;
+
+  bottom: 50px;
+  right: 50px;
+  transform: scale(400%);
+ }
+
+
+
  @media (min-width: 1024px){
   section{
     margin: 120px 3em 120px 3em;

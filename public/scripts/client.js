@@ -93,7 +93,25 @@ $(()=>{
   });
 
 
+  $(window).scroll(()=>{
+    const $scrollBackUpButton = $('.scroll-back-up');
+    const $window = $(window);
 
+    if($window.scrollTop() > 10){
+      $scrollBackUpButton.fadeIn()
+    }
+    else if($window.scrollTop() < 10){
+      $scrollBackUpButton.fadeOut()
+    }
+  })
+
+  $('.scroll-back-up').click((event)=>{
+    event.preventDefault();
+    $(window).scrollTop(0);
+    $('.scroll-back-up').fadeOut();
+  })
+
+  $('.scroll-back-up').hide();
 
   loadTweets();
   $('.error-message').hide();
