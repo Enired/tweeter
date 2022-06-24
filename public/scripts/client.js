@@ -36,16 +36,17 @@ $(()=>{
           <i class="fa-regular fa-heart"></i>
           <i class="fa-solid fa-retweet"></i>
           <i class="fa-solid fa-flag"></i>
-        </span>
-      </footer>
-      </article>
-      `)
-
-    return $tweet
-  };
-  
-  //Put together all created tweet article elements
-  const renderTweets = (tweets) => {
+          </span>
+          </footer>
+          </article>
+          `)
+          
+          return $tweet
+        };
+        
+        //Put together all created tweet article elements
+    const renderTweets = (tweets) => {
+    $('.tweet-container').empty();
     for(const tweet of tweets){
       $tweet = createTweetElement(tweet);
       $('.tweet-container').append($tweet);
@@ -72,7 +73,6 @@ $(()=>{
     const userInputSerialize = userInput.serialize()
     console.log(userInputSerialize)
     $.post('/tweets', userInputSerialize, () =>{
-      $('.tweet-container').empty();
       loadTweets();
       userInput.val('')
       
@@ -88,11 +88,10 @@ $(()=>{
 
   $('#form-toggle-button').click((event) => {
     event.preventDefault();
-    console.log('hi')
+    
+
     $('.form-container').slideToggle(913);
   })
-
-
 
 
   loadTweets();
