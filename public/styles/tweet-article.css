@@ -4,8 +4,8 @@ article{
   width: 100%;
   height: auto;
   border: solid #7b7b7b;
-  padding: 10px 10px;
-  margin: 10px 0px;
+  padding: 1em 1em 0em 1em;
+  margin: 1em 1em;
 }
 
 article:hover{
@@ -13,12 +13,11 @@ article:hover{
 }
 
 .article-header{
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   height: fit-content;
-  margin-top: 0px;
+
   background-image: none;
 }
 
@@ -28,11 +27,11 @@ article header span{
 }
 
 article header span img{
-  padding: 10px 0px 10px 10px;
+  padding: 0.5em 0em 0.5em 0.5em;
 }
 
 article h4{
-  margin: 10px;
+  margin: 0.5em;
 }
 
 article p{
@@ -46,10 +45,6 @@ article footer{
   border-top: solid 0.1em #FFFFFF;
 }
 
-article footer p{
-  color:#FFFFFF;
-}
-
 article footer span{
   display: flex;
   align-items: center;
@@ -59,7 +54,7 @@ article footer i{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3px;
+  padding: 0.1em;
   color: #943141
 
 }

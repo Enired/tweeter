@@ -48,7 +48,6 @@ textarea {
 }
 
 .error-message{
-  display: flex;
   flex-direction: row;
   color: red;
   border: solid red;
