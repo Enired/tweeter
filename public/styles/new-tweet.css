@@ -1,28 +1,23 @@
 form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  width: 100%
+  width:100%
 }
 
 form div{
   display: flex;
-  width: 100%;
   color: #e6bd41;
   justify-content: space-between;
   padding: 1rem;
 }
 
 form label{
-  width : 100%;
   font-size: 2rem;
   text-align: center;
   padding:2rem;
 }
 
 textarea {
-  outline: none;
   border-color: white;
   border-top: 0rem;
   border-left: 0rem;
@@ -30,8 +25,6 @@ textarea {
   background-color: #414152;
   overflow-y: hidden;
   resize: none;
-  width: 100%;
-  font-size: 1em;
   height: 3em;
   color: #FFFFFF;
 
@@ -50,7 +43,6 @@ textarea {
   border-color: #e6bd41;
   border-radius: 0.5rem;
   font-family: Bungee;
-  font-weight: bold;
   
 
 }
