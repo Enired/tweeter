@@ -7,10 +7,11 @@ nav{
   position: fixed;
   top: 0;
   z-index: 3;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 #nav-title-logo{
-  margin: 1.5em;
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -21,7 +22,7 @@ nav{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 1.5em;
+
 }
 .write-new-tweet-logo{
   display: flex;
