@@ -86,10 +86,10 @@ $(()=>{
     });
   };
 
-  $('#form-toggle-button').click((event) => {
+  $('.write-new-tweet').click((event) => {
     event.preventDefault();
-    $('.form-container').slideToggle(913);
-    $('#tweet-text').focus();
+  $('.form-container').slideToggle(913);
+  $('#tweet-text').focus();
   });
 
 
