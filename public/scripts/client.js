@@ -70,8 +70,10 @@ $(()=>{
       $('.error-message').text('⚠ Too many characters.');
       return $('.error-message').slideDown(1000);
     }
+    //Serialize Input
     const userInputSerialize = userInput.serialize();
-    console.log(userInputSerialize);
+
+    //Post Tweet to page
     $.post('/tweets', userInputSerialize, () =>{
       loadTweets();
       userInput.val('');
@@ -80,19 +82,22 @@ $(()=>{
     
   });
   
+  //Tweets to load on page
   const loadTweets = () =>{
     $.get("/tweets", (data) => {
       renderTweets(data);
     });
   };
 
+
+  //Event listener to show and hide tweet composer form
   $('#form-toggle-button').click((event) => {
     event.preventDefault();
   $('.form-container').slideToggle(913);
   $('#tweet-text').focus();
   });
 
-
+  //Event listener for displaying scroll up to top button after specific threshold.
   $(window).scroll(()=>{
     const $scrollBackUpButton = $('.scroll-back-up');
     const $window = $(window);
@@ -105,14 +110,17 @@ $(()=>{
     }
   })
 
+
+  //Event listener for clicking the scroll up to top button
   $('.scroll-back-up').click((event)=>{
     event.preventDefault();
     $(window).scrollTop(0);
     $('.scroll-back-up').fadeOut();
   })
 
-  $('.scroll-back-up').hide();
 
+  //Initial page load function calls
+  $('.scroll-back-up').hide();
   loadTweets();
   $('.error-message').hide();
   

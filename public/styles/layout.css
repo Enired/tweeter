@@ -67,7 +67,7 @@ body {
  }
 
 
-
+ /* Media Query when screen exceeds 1024px */
  @media (min-width: 1024px){
   section{
     margin: 120px 3em 120px 3em;
