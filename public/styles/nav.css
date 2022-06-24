@@ -29,9 +29,13 @@ nav{
   justify-content: center;
 }
 
-nav i{color:#943141
+nav i{color:#943141;
+  position: relative;
+  top: 0;
+  transition: top ease 0.75s;
 }
 nav i:hover{
   color:#e6bd41;
   cursor: pointer;
+  top: 5px
 }

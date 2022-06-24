@@ -86,11 +86,13 @@ $(()=>{
     });
   };
 
-  $('.write-new-tweet').click((event) => {
+  $('#form-toggle-button').click((event) => {
     event.preventDefault();
   $('.form-container').slideToggle(913);
   $('#tweet-text').focus();
   });
+
+
 
 
   loadTweets();
