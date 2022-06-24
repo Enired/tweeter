@@ -31,3 +31,6 @@ nav{
 
 nav i{color:#943141
 }
+nav i:hover{
+  color:#e6bd41;
+}
