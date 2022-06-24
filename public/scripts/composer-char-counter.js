@@ -16,19 +16,19 @@ $(()=>{
     // }
 
     const charMax = 140;
-    let charRemaining = charMax - $userInput.val().length
-    composerCharCounter.val(charRemaining)
+    let charRemaining = charMax - $userInput.val().length;
+    composerCharCounter.val(charRemaining);
     
-    if(charRemaining < 0){
-      composerCharCounter.addClass('counter-over-limit')
+    if (charRemaining < 0) {
+      composerCharCounter.addClass('counter-over-limit');
     }
 
-    if(charRemaining >=0){
-      composerCharCounter.removeClass('counter-over-limit')
+    if (charRemaining >= 0) {
+      composerCharCounter.removeClass('counter-over-limit');
     }
     
 
-    console.log(charRemaining)
-    })
+    console.log(charRemaining);
+  });
   
-})
+});

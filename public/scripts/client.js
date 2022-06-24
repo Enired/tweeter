@@ -9,14 +9,14 @@ $(()=>{
   const createTweetElement = (tweetObj) => {
 
     //Tweet User Info
-    const user = tweetObj.user
+    const user = tweetObj.user;
     const username = user.name;
-    const userAvatar = user.avatars
+    const userAvatar = user.avatars;
     const userHandle = user.handle;
 
     //Tweet Content
-    const content = $("<p>").text(tweetObj.content.text).html()
-    const creationDate = timeago.format(tweetObj.created_at)
+    const content = $("<p>").text(tweetObj.content.text).html();
+    const creationDate = timeago.format(tweetObj.created_at);
 
     //Article Assembly
     let $tweet = $(`
@@ -39,63 +39,63 @@ $(()=>{
           </span>
           </footer>
           </article>
-          `)
+          `);
           
-          return $tweet
-        };
+    return $tweet;
+  };
         
-        //Put together all created tweet article elements
-    const renderTweets = (tweets) => {
+  //Put together all created tweet article elements
+  const renderTweets = (tweets) => {
     $('.tweet-container').empty();
-    for(const tweet of tweets){
+    for (const tweet of tweets) {
       $tweet = createTweetElement(tweet);
       $('.tweet-container').append($tweet);
     }
-  }
+  };
 
   //Form Submission Event Handler
   $('#compose-tweet').submit((event) => {
     event.preventDefault();
-    const userInput = $('#tweet-text') 
-    $('.error-message').slideUp(0)
+    const userInput = $('#tweet-text');
+    $('.error-message').slideUp(0);
     
     
     //Form Validation
-    if(userInput.val() === '' || userInput.val() === null){
-      $('.error-message').text('⚠ Please enter something')
-      return $('.error-message').slideDown(1000)
+    if (userInput.val() === '' || userInput.val() === null) {
+      $('.error-message').text('⚠ Please enter something');
+      return $('.error-message').slideDown(1000);
     }
     
-    if(userInput.val().length > 140){
-      $('.error-message').text('⚠ Too many characters.')
-      return $('.error-message').slideDown(1000)
+    if (userInput.val().length > 140) {
+      $('.error-message').text('⚠ Too many characters.');
+      return $('.error-message').slideDown(1000);
     }
-    const userInputSerialize = userInput.serialize()
-    console.log(userInputSerialize)
+    const userInputSerialize = userInput.serialize();
+    console.log(userInputSerialize);
     $.post('/tweets', userInputSerialize, () =>{
       loadTweets();
-      userInput.val('')
+      userInput.val('');
       
-    })
+    });
     
-  })
+  });
   
   const loadTweets = () =>{
-    const tweets = $.get("/tweets", (data) => {
-      renderTweets(data)
-    } )
-  }
+    $.get("/tweets", (data) => {
+      renderTweets(data);
+    });
+  };
 
   $('#form-toggle-button').click((event) => {
     event.preventDefault();
     
 
     $('.form-container').slideToggle(913);
-  })
+  });
 
 
   loadTweets();
-  $('.error-message').hide()
+  $('.error-message').hide();
   
 
 
@@ -107,4 +107,4 @@ $(()=>{
 
 
 
-})
+});
